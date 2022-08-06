@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_discounts",
+  "info": {
+    "singularName": "product-discount",
+    "pluralName": "product-discounts",
+    "displayName": "Product Discount"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "percentage": {
+      "type": "integer",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "required": true
+    },
+    "discountCode": {
+      "type": "string",
+      "required": true
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "mappedBy": "productDiscount"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_colors_furnitures",
+  "info": {
+    "displayName": "Furniture",
+    "icon": "check-circle"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "colorImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "images.gallery",
+      "required": true
+    }
+  }
+}

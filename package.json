@@ -1,0 +1,38 @@
+{
+  "name": "ecommerce-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "test": "jest --forceExit --detectOpenHandles"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "jest": "^28.1.3",
+    "sqlite3": "^5.0.11",
+    "supertest": "^6.2.4",
+    "ts-jest": "^28.0.7"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.3.2",
+    "@strapi/plugin-users-permissions": "4.3.2",
+    "@strapi/strapi": "4.3.2",
+    "better-sqlite3": "7.6.2",
+    "pg": "^8.7.3"
+  },
+  "author": {
+    "name": "Alex Arevalo"
+  },
+  "strapi": {
+    "uuid": "47293376-fe84-4787-933b-5644a045fab4"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

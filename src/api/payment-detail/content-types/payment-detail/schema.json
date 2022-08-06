@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_details",
+  "info": {
+    "singularName": "payment-detail",
+    "pluralName": "payment-details",
+    "displayName": "Payment Detail"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "creditCard",
+        "debitCard",
+        "crypto",
+        "cash"
+      ],
+      "required": true
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "provider": {
+      "type": "enumeration",
+      "enum": [
+        "kushki",
+        "solana",
+        "stripe"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "completed",
+        "pending",
+        "denied",
+        "failed",
+        "refunded"
+      ],
+      "required": true
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order",
+      "inversedBy": "paymentDetail"
+    }
+  }
+}
